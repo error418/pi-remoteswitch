@@ -1,12 +1,18 @@
-# FMSend
+# Skyswitch
+
+## Dependencies
 
 You will need `wiringPi` and `rcswitch-pi` as dependencies for this project.
 
-## Python Dependencies
+### Python Dependencies
 
-This project depends on [flask](http://flask.pocoo.org/ "Flask"), which you can retrieve via `pip`
+This project depends on [flask](http://flask.pocoo.org/ "Flask"), which you can retrieve via `pip`.
 
-## rcswitch-pi
+### wiringPi
+
+You will need to install wiringPi on your system.
+
+### rcswitch-pi
 
 You will need a forked implementation of rcswitch-pi. You can retrieve it [here](https://github.com/Error418/rcswitch-pi).
 
