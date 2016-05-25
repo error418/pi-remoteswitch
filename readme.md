@@ -1,6 +1,16 @@
 # FMSend
 
-You will need `wiringPi` and `rcswitch-pi` as dependencies for this project 
+You will need `wiringPi` and `rcswitch-pi` as dependencies for this project.
+
+## Python Dependencies
+
+This project depends on [flask](http://flask.pocoo.org/ "Flask"), which you can retrieve via `pip`
+
+## rcswitch-pi
+
+You will need a forked implementation of rcswitch-pi. You can retrieve it [here](https://github.com/Error418/rcswitch-pi).
+
+The `send.cpp` is modified in this fork to directly accept tri-state codes as a program argument.
 
 ## Cron Configuration
 
