@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Skyswitch</title>
+		<meta name="theme-color" content="#008530" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script language="javascript">
+			// <![CDATA[
+				// reset form
+				function resetForm() {
+					"use strict";
+					window.setTimeout(
+						function () {
+							document.getElementById("formContainer").src = "about:blank";
+						},
+						250
+					);
+				}
+			// ]]>
+		</script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#/">Skyswitch</a>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<div class="container-fluid">
+			<div class="col-xs-12">
+				<form action="http://192.168.0.133:5000/send" method="POST" target="formContainer">
+					<input name="syscode" value="B" type="hidden" />
+					<input name="devicecode" value="1" type="hidden" />
+					<input name="state" value="1" type="hidden" />
+
+					<button style="width:100%" type="submit" class="btn btn-success" onclick="resetForm()">On</button>
+				</form>
+			</div>
+
+			<div class="col-xs-12" style="height:20px"></div>
+
+			<div class="col-xs-12">
+				<form action="http://192.168.0.133:5000/send" method="POST" target="formContainer">
+					<input name="syscode" value="B" type="hidden" />
+					<input name="devicecode" value="1" type="hidden" />
+					<input name="state" value="0" type="hidden" />
+
+					<button style="width:100%" type="submit" class="btn btn-danger" onclick="resetForm()">Off</button>
+				</form>
+			</div>
+		</div>
+
+		<iframe id="formContainer" name="formContainer" style="visibility:hidden"></iframe>
+
+	</body>
+</html>
+	
